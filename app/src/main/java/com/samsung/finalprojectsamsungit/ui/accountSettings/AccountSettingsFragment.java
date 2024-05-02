@@ -1,4 +1,4 @@
-package com.samsung.finalprojectsamsungit.ui.slideshow;
+package com.samsung.finalprojectsamsungit.ui.accountSettings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.samsung.finalprojectsamsungit.databinding.FragmentSlideshowBinding;
+import com.samsung.finalprojectsamsungit.databinding.FragmentAccountSettingsBinding;
 
-public class SlideshowFragment extends Fragment {
+public class AccountSettingsFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentAccountSettingsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        AccountSettingsViewModel slideshowViewModel =
+                new ViewModelProvider(this).get(AccountSettingsViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentAccountSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
+        final TextView textView = binding.textAccountSettings;
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }

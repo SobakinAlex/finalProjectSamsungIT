@@ -1,4 +1,4 @@
-package com.samsung.finalprojectsamsungit.ui.home;
+package com.samsung.finalprojectsamsungit.ui.pays;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.samsung.finalprojectsamsungit.databinding.FragmentHomeBinding;
+import com.samsung.finalprojectsamsungit.databinding.FragmentPaysBinding;
 
-public class HomeFragment extends Fragment {
+public class PaysFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentPaysBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        PaysViewModel paysViewModel =
+                new ViewModelProvider(this).get(PaysViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentPaysBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textPays;
+        paysViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

@@ -1,14 +1,14 @@
-package com.samsung.finalprojectsamsungit.ui.home;
+package com.samsung.finalprojectsamsungit.ui.pets;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class PetsViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public PetsViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is home fragment");
     }
