@@ -10,4 +10,7 @@
     <string name="menu_pets">Животные</string>
     <string name="menu_pays">Способы оплаты</string>
     <string name="menu_account_settings">Настройки аккаунта</string>
+    <string name="menu_address">Мои адреса</string>
+    <string name="menu_help">Помощь</string>
+    <string name="menu_information">Информация</string>
 </resources>
