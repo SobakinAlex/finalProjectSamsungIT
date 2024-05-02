@@ -18,7 +18,7 @@
         tools:layout="@layout/fragment_pays" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_account_settings"
         android:name="com.samsung.finalprojectsamsungit.ui.accountSettings.AccountSettingsFragment"
         android:label="@string/menu_account_settings"
         tools:layout="@layout/fragment_account_settings" />
