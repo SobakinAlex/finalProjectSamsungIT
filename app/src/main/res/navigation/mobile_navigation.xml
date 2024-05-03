@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_pets">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_pets"
         android:name="com.samsung.finalprojectsamsungit.ui.pets.PetsFragment"
         android:label="@string/menu_pets"
         tools:layout="@layout/fragment_pets" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_pays"
         android:name="com.samsung.finalprojectsamsungit.ui.pays.PaysFragment"
         android:label="@string/menu_pays"
         tools:layout="@layout/fragment_pays" />
@@ -22,4 +22,22 @@
         android:name="com.samsung.finalprojectsamsungit.ui.accountSettings.AccountSettingsFragment"
         android:label="@string/menu_account_settings"
         tools:layout="@layout/fragment_account_settings" />
+
+    <fragment
+        android:id="@+id/nav_address"
+        android:name="com.samsung.finalprojectsamsungit.ui.address.AddressFragment"
+        android:label="@string/menu_address"
+        tools:layout="@layout/fragment_address"/>
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="com.samsung.finalprojectsamsungit.ui.help.HelpFragment"
+        android:label="@string/menu_help"
+        tools:layout="@layout/fragment_help"/>
+
+    <fragment
+        android:id="@+id/nav_information"
+        android:name="com.samsung.finalprojectsamsungit.ui.information.InformationFragment"
+        android:label="@string/menu_information"
+        tools:layout="@layout/fragment_information"/>
 </navigation>
