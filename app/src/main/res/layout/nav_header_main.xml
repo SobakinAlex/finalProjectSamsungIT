@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/side_nav_bar"
+    android:background="@color/white"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -28,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/users_photo"
+        android:textColor="@color/black"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="@string/nav_header_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -39,5 +40,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/users_photo"
         app:layout_constraintTop_toBottomOf="@+id/users_name"
+        android:textColor="@color/black"
         android:text="@string/nav_header_subtitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

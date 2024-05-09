@@ -1,27 +1,25 @@
-package com.samsung.finalprojectsamsungit.ui.accountSettings;
+package com.samsung.finalprojectsamsungit.ui.map;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.samsung.finalprojectsamsungit.databinding.FragmentAccountSettingsBinding;
+import com.samsung.finalprojectsamsungit.databinding.FragmentMapBinding;;
 
-public class AccountSettingsFragment extends Fragment {
-
-    private FragmentAccountSettingsBinding binding;
+public class MapFragment extends Fragment {
+    private FragmentMapBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        AccountSettingsViewModel accountSettingsViewModel =
-                new ViewModelProvider(this).get(AccountSettingsViewModel.class);
+        MapViewModel mapViewModel =
+                new ViewModelProvider(this).get(MapViewModel.class);
 
-        binding = FragmentAccountSettingsBinding.inflate(inflater, container, false);
+        binding = FragmentMapBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         return root;
     }

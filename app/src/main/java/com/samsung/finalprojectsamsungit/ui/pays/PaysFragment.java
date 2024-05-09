@@ -23,9 +23,6 @@ public class PaysFragment extends Fragment {
 
         binding = FragmentPaysBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-        final TextView textView = binding.textPays;
-        paysViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

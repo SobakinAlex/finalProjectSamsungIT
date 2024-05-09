@@ -18,14 +18,11 @@ public class PetsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        PetsViewModel homeViewModel =
+        PetsViewModel petsViewModel =
                 new ViewModelProvider(this).get(PetsViewModel.class);
 
         binding = FragmentPetsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
-        final TextView textView = binding.textPets;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
