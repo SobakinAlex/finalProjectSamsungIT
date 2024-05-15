@@ -14,4 +14,6 @@
     <string name="menu_address">Мои адреса</string>
     <string name="menu_help">Помощь</string>
     <string name="menu_information">Информация</string>
+    
+    <string name="pets_change"><u>Изменить</u></string>
 </resources>
