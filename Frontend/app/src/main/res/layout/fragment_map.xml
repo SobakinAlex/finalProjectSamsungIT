@@ -31,33 +31,36 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="@+id/cl_map"
-        android:background="@color/grey">
+        android:background="@drawable/roundedlayout"
+        android:id="@+id/cl_bottom_order">
 
         <Button
-            android:id="@+id/bt_call"
+            android:id="@+id/btn_call"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Вызвать человека"
             android:textColor="@color/black"
+            android:background="@drawable/roundedbutton"
             android:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/bt_ready"
+            app:layout_constraintEnd_toStartOf="@+id/btn_ready"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:drawableBottom="@drawable/puppy"
             />
 
         <Button
-            android:id="@+id/bt_ready"
+            android:id="@+id/btn_ready"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:text="Готов погулять"
             android:textColor="@color/black"
+            android:background="@drawable/roundedbutton"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/bt_call"
+            app:layout_constraintStart_toEndOf="@id/btn_call"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:drawableBottom="@drawable/walk_with_dog"
