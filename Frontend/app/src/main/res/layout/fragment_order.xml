@@ -69,6 +69,16 @@
         app:layout_constraintTop_toBottomOf="@+id/my_second_address"
         android:backgroundTint="@color/yellow"/>
 
+    <Button
+        android:id="@+id/prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_second_address"
+        android:backgroundTint="@color/yellow"/>
+
 
 
 
