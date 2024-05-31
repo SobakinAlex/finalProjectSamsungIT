@@ -1,4 +1,4 @@
-package com.samsung.finalprojectsamsungit.ui.order;
+package com.samsung.finalprojectsamsungit.ui.orderpettime;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,20 +12,21 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.samsung.finalprojectsamsungit.R;
-import com.samsung.finalprojectsamsungit.databinding.FragmentOrderBinding;
+import com.samsung.finalprojectsamsungit.databinding.FragmentOrderpettimeBinding;
 import com.samsung.finalprojectsamsungit.ui.map.MapFragment;
-import com.samsung.finalprojectsamsungit.ui.orderpettime.OrderPetTimeFragment;
-import com.samsung.finalprojectsamsungit.ui.orderpettime.OrderPetTimeViewModel;
+import com.samsung.finalprojectsamsungit.ui.order.OrderFragment;
 
-public class OrderFragment extends Fragment {
-    private FragmentOrderBinding binding;
+import java.util.Map;
+
+public class OrderPetTimeFragment extends Fragment {
+    private FragmentOrderpettimeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        OrderViewModel orderViewModel =
-                new ViewModelProvider(this).get(OrderViewModel.class);
+        OrderPetTimeViewModel orderPetTimeViewModel =
+                new ViewModelProvider(this).get(OrderPetTimeViewModel.class);
 
-        binding = FragmentOrderBinding.inflate(inflater, container, false);
+        binding = FragmentOrderpettimeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         return root;
     }
@@ -33,23 +34,24 @@ public class OrderFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        binding.prevOrder.setOnClickListener(new View.OnClickListener() {
+
+        binding.prevOrderpettime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MapFragment mapFrag = new MapFragment();
+                OrderFragment orderFragment = new OrderFragment();
                 FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.cl_order, mapFrag);
+                transaction.replace(R.id.cl_orderpettime, orderFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
 
-        binding.nextOrder.setOnClickListener(new View.OnClickListener() {
+        binding.nextOrderpettime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                OrderPetTimeFragment orderPetTimeFragment = new OrderPetTimeFragment();
-                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.cl_order, orderPetTimeFragment);
+                MapFragment mapFragment = new MapFragment();
+                FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+                transaction.replace(R.id.cl_orderpettime, mapFragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
             }

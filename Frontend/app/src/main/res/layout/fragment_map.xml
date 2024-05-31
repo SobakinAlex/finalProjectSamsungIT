@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cl_map">
+    android:id="@+id/cl_map"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/address"
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Ваш адрес >"
         android:textColor="@color/black"
-        android:textSize="17dp"
+        android:textSize="17sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
@@ -23,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Профсоюзная 98к2"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/address"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
@@ -36,12 +37,13 @@
         android:background="@drawable/roundedlayout"
         android:id="@+id/cl_bottom_order">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_call"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Вызвать человека"
             android:textColor="@color/black"
+            android:textSize="17sp"
             android:background="@drawable/roundedbutton"
             android:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -51,13 +53,14 @@
             android:drawableBottom="@drawable/puppy"
             />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_ready"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:text="Готов погулять"
             android:textColor="@color/black"
+            android:textSize="17sp"
             android:background="@drawable/roundedbutton"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_call"

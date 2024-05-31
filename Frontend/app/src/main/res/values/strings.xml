@@ -16,4 +16,9 @@
     <string name="menu_information">Информация</string>
     
     <string name="pets_change"><u>Изменить</u></string>
+
+    <string-array name="pets">
+        <item>Бультерьер</item>
+        <item>Бигль</item>
+    </string-array>
 </resources>

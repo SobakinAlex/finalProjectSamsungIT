@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cl_order">
+    android:id="@+id/cl_order"
+    android:background="@color/white">
 
     <EditText
         android:id="@+id/order_address"
@@ -59,8 +60,8 @@
         android:layout_marginLeft="15dp"
         app:layout_constraintTop_toBottomOf="@+id/my_first_address"/>
 
-    <Button
-        android:id="@+id/next"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Далее"
@@ -69,8 +70,8 @@
         app:layout_constraintTop_toBottomOf="@+id/my_second_address"
         android:backgroundTint="@color/yellow"/>
 
-    <Button
-        android:id="@+id/prev"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/prev_order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Назад"

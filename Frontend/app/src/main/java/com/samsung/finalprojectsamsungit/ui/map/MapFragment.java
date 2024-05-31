@@ -1,6 +1,11 @@
 package com.samsung.finalprojectsamsungit.ui.map;
 
 
+import static android.graphics.Color.WHITE;
+import static android.graphics.Color.YELLOW;
+
+import android.annotation.SuppressLint;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.ColorSpace;
 import android.os.Bundle;
@@ -12,6 +17,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -23,9 +29,7 @@ import com.samsung.finalprojectsamsungit.ui.order.OrderFragment;;
 public class MapFragment extends Fragment{
     private Button button;
     private MaterialButton btn;
-    private int[] colors = {Color.WHITE, Color.YELLOW};
     private FragmentMapBinding binding;
-    private int k = 0;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -40,22 +44,25 @@ public class MapFragment extends Fragment{
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        FragmentManager fragmentManager = getParentFragmentManager();
 
 
         binding.btnReady.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
             }
         });
         binding.btnCall.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 OrderFragment orderFrag = new OrderFragment();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.cl_map, orderFrag);
+                transaction.addToBackStack(null);
+                transaction.commit();
 
-                FragmentTransaction ft = getChildFragmentManager().beginTransaction();
-                ft.add(R.id.cl_map, orderFrag).addToBackStack(null);
-                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-                ft.commit();
             }
         });
     }
