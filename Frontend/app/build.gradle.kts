@@ -35,6 +35,11 @@ android {
 }
 
 dependencies {
+    annotationProcessor("com.github.bumptech.glide:compiler:4.14.1")
+    implementation("com.firebaseui:firebase-ui-storage:7.2.0")
+    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation("com.google.firebase:firebase-analytics:22.0.1")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
