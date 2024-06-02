@@ -1,8 +1,7 @@
 package com.samsung.finalprojectsamsungit.ui.map;
 
 
-import static android.graphics.Color.WHITE;
-import static android.graphics.Color.YELLOW;
+
 
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
@@ -16,6 +15,7 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -27,9 +27,11 @@ import com.samsung.finalprojectsamsungit.databinding.FragmentMapBinding;
 import com.samsung.finalprojectsamsungit.ui.order.OrderFragment;;
 
 public class MapFragment extends Fragment{
-    private Button button;
+    private AppCompatButton button;
     private MaterialButton btn;
     private FragmentMapBinding binding;
+    private boolean k = true;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -50,7 +52,14 @@ public class MapFragment extends Fragment{
         binding.btnReady.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (k){
+                    button.setBackgroundColor(Color.YELLOW);
+                    k = false;
+                }
+                else{
+                    button.setBackgroundColor(Color.WHITE);
+                    k = true;
+                }
             }
         });
         binding.btnCall.setOnClickListener(new View.OnClickListener() {
